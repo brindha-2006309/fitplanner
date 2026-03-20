@@ -3,8 +3,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { getProfile, getWorkoutPlan, getDietPlan, getTodayProgress, askAI } from '../services/api';
 import WaterTracker from '../components/WaterTracker';
-import { Target, Activity, Flame, Scale, Trophy, ChevronRight, Apple, MessageCircle, X, Send } from 'lucide-react';
-
 const StatCard = ({ icon, label, value, colorClass }) => (
   <div className={`card relative overflow-hidden group hover:-translate-y-1 transition-all duration-300`}>
     <div className={`absolute -right-6 -top-6 w-24 h-24 rounded-full opacity-10 blur-2xl group-hover:scale-150 transition-transform duration-500 ${colorClass.bg}`} />
@@ -21,17 +19,17 @@ const StatCard = ({ icon, label, value, colorClass }) => (
 );
 
 const Dashboard = () => {
-  const [profile,  setProfile]  = useState(null);
-  const [workout,  setWorkout]  = useState(null);
-  const [diet,     setDiet]     = useState(null);
+  const [profile, setProfile] = useState(null);
+  const [workout, setWorkout] = useState(null);
+  const [diet, setDiet] = useState(null);
   const [todayLog, setTodayLog] = useState(null);
-  const [loading,  setLoading]  = useState(true);
+  const [loading, setLoading] = useState(true);
 
   // Chat Widget State
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatInput, setChatInput] = useState('');
   const [isChatLoading, setIsChatLoading] = useState(false);
-  
+
   // Persist chat state across page refresh
   const [messages, setMessages] = useState(() => {
     const saved = sessionStorage.getItem('chatHistory');
@@ -101,14 +99,14 @@ const Dashboard = () => {
   }
 
   // Determine today's workout based on day of week
-  const days   = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const today  = days[new Date().getDay()];
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const today = days[new Date().getDay()];
   const todayWorkout = workout?.weekPlan?.find((d) => d.day === today);
 
   const goalLabel = {
-    weight_loss:  'Weight Loss',
-    muscle_gain:  'Muscle Gain',
-    maintenance:  'Maintenance',
+    weight_loss: 'Weight Loss',
+    muscle_gain: 'Muscle Gain',
+    maintenance: 'Maintenance',
   };
 
   return (
@@ -138,33 +136,33 @@ const Dashboard = () => {
 
       {/* Stats cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <StatCard 
-          icon={<Target className="w-6 h-6" />} 
-          label="Fitness Goal"     
-          value={goalLabel[profile?.fitnessGoal] || '—'} 
-          colorClass={{ bg: 'bg-orange-500', iconBg: 'bg-orange-500/20', iconText: 'text-orange-500' }} 
+        <StatCard
+          icon={<Target className="w-6 h-6" />}
+          label="Fitness Goal"
+          value={goalLabel[profile?.fitnessGoal] || '—'}
+          colorClass={{ bg: 'bg-orange-500', iconBg: 'bg-orange-500/20', iconText: 'text-orange-500' }}
         />
-        <StatCard 
-          icon={<Scale className="w-6 h-6" />} 
-          label="Current Weight"  
-          value={profile?.weight ? `${profile.weight} kg` : '—'} 
-          colorClass={{ bg: 'bg-blue-500', iconBg: 'bg-blue-500/20', iconText: 'text-blue-500' }} 
+        <StatCard
+          icon={<Scale className="w-6 h-6" />}
+          label="Current Weight"
+          value={profile?.weight ? `${profile.weight} kg` : '—'}
+          colorClass={{ bg: 'bg-blue-500', iconBg: 'bg-blue-500/20', iconText: 'text-blue-500' }}
         />
-        <StatCard 
-          icon={<Activity className="w-6 h-6" />} 
-          label="Calorie Goal"     
-          value={`${profile?.caloriesGoal || 2000} kcal`} 
-          colorClass={{ bg: 'bg-rose-500', iconBg: 'bg-rose-500/20', iconText: 'text-rose-500' }} 
+        <StatCard
+          icon={<Activity className="w-6 h-6" />}
+          label="Calorie Goal"
+          value={`${profile?.caloriesGoal || 2000} kcal`}
+          colorClass={{ bg: 'bg-rose-500', iconBg: 'bg-rose-500/20', iconText: 'text-rose-500' }}
         />
-        <StatCard 
-          icon={<Trophy className="w-6 h-6" />} 
-          label="BMI Score"               
+        <StatCard
+          icon={<Trophy className="w-6 h-6" />}
+          label="BMI Score"
           value={
             profile?.height && profile?.weight
               ? (profile.weight / ((profile.height / 100) ** 2)).toFixed(1)
               : '—'
-          } 
-          colorClass={{ bg: 'bg-emerald-500', iconBg: 'bg-emerald-500/20', iconText: 'text-emerald-500' }} 
+          }
+          colorClass={{ bg: 'bg-emerald-500', iconBg: 'bg-emerald-500/20', iconText: 'text-emerald-500' }}
         />
       </div>
 
@@ -179,7 +177,7 @@ const Dashboard = () => {
             </h2>
             <span className="text-slate-400 text-sm font-medium">{today}</span>
           </div>
-          
+
           {todayWorkout ? (
             <>
               <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -222,9 +220,9 @@ const Dashboard = () => {
               )}
             </>
           ) : (
-             <div className="text-center py-10 bg-slate-800/30 rounded-xl border border-dashed border-slate-700">
-               <p className="text-slate-400">No workout data available.</p>
-             </div>
+            <div className="text-center py-10 bg-slate-800/30 rounded-xl border border-dashed border-slate-700">
+              <p className="text-slate-400">No workout data available.</p>
+            </div>
           )}
         </div>
 
@@ -241,8 +239,8 @@ const Dashboard = () => {
       {diet && (
         <div className="card bg-gradient-to-br from-slate-800/80 to-slate-900/80">
           <div className="flex items-center gap-2 mb-6">
-             <span className="bg-green-500/20 text-green-400 p-2 rounded-lg"><Apple className="w-5 h-5" /></span>
-             <h2 className="text-white font-bold text-xl">Today's Diet Summary</h2>
+            <span className="bg-green-500/20 text-green-400 p-2 rounded-lg"><Apple className="w-5 h-5" /></span>
+            <h2 className="text-white font-bold text-xl">Today's Diet Summary</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {['breakfast', 'lunch', 'dinner', 'snacks'].map((meal) => (
@@ -265,7 +263,7 @@ const Dashboard = () => {
             </div>
             <div className="w-px h-10 bg-slate-700 hidden sm:block"></div>
             <div className="text-center">
-               <p className="text-slate-400 text-xs mb-1 uppercase tracking-wider font-semibold">Carbs</p>
+              <p className="text-slate-400 text-xs mb-1 uppercase tracking-wider font-semibold">Carbs</p>
               <p className="text-emerald-400 font-bold text-2xl">{diet.totalCarbs}<span className="text-sm ml-0.5">g</span></p>
             </div>
           </div>
@@ -287,7 +285,7 @@ const Dashboard = () => {
                   <span className="text-white/70 text-xs font-medium">Your Fitness Assistant</span>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => setIsChatOpen(false)}
                 className="text-white/80 hover:text-white transition-colors"
                 title="Close chat"
@@ -295,16 +293,15 @@ const Dashboard = () => {
                 <X className="w-5 h-5" />
               </button>
             </div>
-            
+
             {/* Messages Area */}
             <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-slate-900/50">
               {messages.map((msg, idx) => (
                 <div key={idx} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[85%] px-4 py-2 text-sm shadow-sm ${
-                    msg.sender === 'user' 
-                      ? 'bg-blue-600 text-white rounded-2xl rounded-br-sm' 
+                  <div className={`max-w-[85%] px-4 py-2 text-sm shadow-sm ${msg.sender === 'user'
+                      ? 'bg-blue-600 text-white rounded-2xl rounded-br-sm'
                       : 'bg-slate-700 text-slate-200 border border-slate-600 rounded-2xl rounded-bl-sm'
-                  }`}>
+                    }`}>
                     {msg.text}
                   </div>
                 </div>
@@ -320,7 +317,7 @@ const Dashboard = () => {
               )}
               <div ref={chatEndRef} />
             </div>
-            
+
             {/* Input Area */}
             <div className="p-3 bg-slate-800 border-t border-slate-700">
               <form onSubmit={handleSendMessage} className="flex gap-2">

@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { getProfile, updateProfile } from '../services/api';
 import { useNavigate } from 'react-router-dom';
-import { User, Activity, Flame, Droplets, Target, Scale, Save, CheckCircle, AlertTriangle } from 'lucide-react';
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -11,22 +10,22 @@ const Profile = () => {
     name: '', age: '', gender: '', height: '', weight: '',
     fitnessGoal: 'maintenance', waterGoal: 8, caloriesGoal: 2000,
   });
-  const [loading, setLoading]     = useState(true);
-  const [saving, setSaving]       = useState(false);
-  const [message, setMessage]     = useState('');
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
         const { data } = await getProfile();
         setForm({
-          name:         data.name         || '',
-          age:          data.age          || '',
-          gender:       data.gender       || '',
-          height:       data.height       || '',
-          weight:       data.weight       || '',
-          fitnessGoal:  data.fitnessGoal  || 'maintenance',
-          waterGoal:    data.waterGoal    || 8,
+          name: data.name || '',
+          age: data.age || '',
+          gender: data.gender || '',
+          height: data.height || '',
+          weight: data.weight || '',
+          fitnessGoal: data.fitnessGoal || 'maintenance',
+          waterGoal: data.waterGoal || 8,
           caloriesGoal: data.caloriesGoal || 2000,
         });
       } catch (err) {
@@ -83,54 +82,53 @@ const Profile = () => {
       </div>
 
       {message && (
-        <div className={`px-4 py-4 rounded-xl text-sm flex items-center gap-3 border shadow-lg ${
-          message.startsWith('✅')
+        <div className={`px-4 py-4 rounded-xl text-sm flex items-center gap-3 border shadow-lg ${message.startsWith('✅')
             ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-emerald-500/5'
             : 'bg-rose-500/10 border-rose-500/30 text-rose-400 shadow-rose-500/5'
-        }`}>
+          }`}>
           {message.startsWith('✅') ? <CheckCircle className="w-5 h-5 shrink-0" /> : <AlertTriangle className="w-5 h-5 shrink-0" />}
           <span className="font-medium text-base">{message.replace('✅ ', '').replace('❌ ', '')}</span>
         </div>
       )}
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        
+
         {/* Left column: BMI and Quick stats */}
         <div className="space-y-6">
-           {/* BMI Preview */}
-           {bmi && (
-             <div className="card bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border-indigo-500/20 relative overflow-hidden group">
-               <div className="absolute -right-6 -top-6 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500 pointer-events-none" />
-               <div className="flex items-center gap-4 relative z-10">
-                 <div className="p-3 bg-indigo-500/20 rounded-xl shadow-inner">
-                   <Scale className="w-8 h-8 text-indigo-400" />
-                 </div>
-                 <div>
-                   <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">Current BMI</p>
-                   <p className="text-indigo-400 font-black text-3xl tracking-tighter drop-shadow-sm">{bmi}</p>
-                 </div>
-               </div>
-             </div>
-           )}
-           
-           <div className="card bg-slate-800/40 border-slate-700/50">
-             <h3 className="text-white font-bold mb-4 flex items-center gap-2">
-               <Target className="w-4 h-4 text-orange-400" /> Current Goal
-             </h3>
-             <div className="bg-slate-900/50 rounded-xl p-4 border border-slate-700/30">
-               <span className="text-orange-400 font-bold uppercase tracking-wide text-sm">
-                 {form.fitnessGoal.replace('_', ' ')}
-               </span>
-               <p className="text-slate-400 text-xs mt-2 leading-relaxed">
-                 Based on your current goal, we aim for <strong className="text-slate-300">{form.caloriesGoal} kcal</strong> daily and <strong className="text-slate-300">{form.waterGoal} glasses</strong> of water.
-               </p>
-             </div>
-           </div>
+          {/* BMI Preview */}
+          {bmi && (
+            <div className="card bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border-indigo-500/20 relative overflow-hidden group">
+              <div className="absolute -right-6 -top-6 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500 pointer-events-none" />
+              <div className="flex items-center gap-4 relative z-10">
+                <div className="p-3 bg-indigo-500/20 rounded-xl shadow-inner">
+                  <Scale className="w-8 h-8 text-indigo-400" />
+                </div>
+                <div>
+                  <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider mb-1">Current BMI</p>
+                  <p className="text-indigo-400 font-black text-3xl tracking-tighter drop-shadow-sm">{bmi}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div className="card bg-slate-800/40 border-slate-700/50">
+            <h3 className="text-white font-bold mb-4 flex items-center gap-2">
+              <Target className="w-4 h-4 text-orange-400" /> Current Goal
+            </h3>
+            <div className="bg-slate-900/50 rounded-xl p-4 border border-slate-700/30">
+              <span className="text-orange-400 font-bold uppercase tracking-wide text-sm">
+                {form.fitnessGoal.replace('_', ' ')}
+              </span>
+              <p className="text-slate-400 text-xs mt-2 leading-relaxed">
+                Based on your current goal, we aim for <strong className="text-slate-300">{form.caloriesGoal} kcal</strong> daily and <strong className="text-slate-300">{form.waterGoal} glasses</strong> of water.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Right column: Main Form */}
         <form onSubmit={handleSubmit} className="lg:col-span-2 card bg-slate-800/60 border-slate-700/50 space-y-8">
-          
+
           {/* Personal Info */}
           <div>
             <h2 className="text-white font-bold text-lg border-b border-slate-700/50 pb-3 mb-5 flex items-center gap-2">
@@ -173,7 +171,7 @@ const Profile = () => {
             <h2 className="text-white font-bold text-lg border-b border-slate-700/50 pb-3 mb-5 flex items-center gap-2">
               <Target className="w-5 h-5 text-orange-400" /> Health Goals
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
               <div className="md:col-span-2">
                 <label className="text-slate-300 text-sm font-semibold block mb-2">Primary Fitness Goal</label>

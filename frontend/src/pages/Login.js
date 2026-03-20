@@ -7,8 +7,8 @@ import { Dumbbell, Mail, Lock, ArrowRight, ArrowLeft } from 'lucide-react';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [form, setForm]     = useState({ email: '', password: '' });
-  const [error, setError]   = useState('');
+  const [form, setForm] = useState({ email: '', password: '' });
+  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
@@ -37,7 +37,7 @@ const Login = () => {
       <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-rose-600/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="w-full max-w-md relative z-10">
-        
+
         {/* Back button */}
         <Link to="/" className="inline-flex items-center gap-2 text-slate-400 hover:text-white mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4" />
@@ -80,11 +80,11 @@ const Login = () => {
                 />
               </div>
             </div>
-            
+
             <div>
               <div className="flex items-center justify-between mb-2">
                 <label className="text-slate-300 text-sm font-semibold block">Password</label>
-                <a href="#" className="text-xs font-medium text-orange-400 hover:text-orange-300 transition-colors">Forgot password?</a>
+                <button type="button" onClick={() => navigate('/forgot-password')} className="text-xs font-medium text-orange-400 hover:text-orange-300 transition-colors"> Forgot password? </button>
               </div>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
