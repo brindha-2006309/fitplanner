@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // Base URL points to our Express backend
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://fitplanner-backend-xq6w.onrender.com/api',
 });
 
 // ─── Request Interceptor ──────────────────────────────────────────────────────
@@ -32,29 +32,29 @@ API.interceptors.response.use(
 );
 
 // ─── Auth APIs ────────────────────────────────────────────────────────────────
-export const registerUser = (data)  => API.post('/auth/register', data);
-export const loginUser    = (data)  => API.post('/auth/login',    data);
-export const getMe        = ()      => API.get('/auth/me');
+export const registerUser = (data) => API.post('/auth/register', data);
+export const loginUser = (data) => API.post('/auth/login', data);
+export const getMe = () => API.get('/auth/me');
 
 // ─── Profile APIs ─────────────────────────────────────────────────────────────
-export const getProfile    = ()     => API.get('/profile');
+export const getProfile = () => API.get('/profile');
 export const updateProfile = (data) => API.put('/profile', data);
 
 // ─── Workout APIs ─────────────────────────────────────────────────────────────
-export const getWorkoutPlan      = ()          => API.get('/workout');
-export const generateWorkoutPlan = ()          => API.post('/workout/generate');
-export const markWorkoutComplete = (dayIndex)  => API.put(`/workout/complete/${dayIndex}`);
+export const getWorkoutPlan = () => API.get('/workout');
+export const generateWorkoutPlan = () => API.post('/workout/generate');
+export const markWorkoutComplete = (dayIndex) => API.put(`/workout/complete/${dayIndex}`);
 
 // ─── Diet APIs ────────────────────────────────────────────────────────────────
-export const getDietPlan    = ()  => API.get('/diet');
-export const generateDiet   = ()  => API.post('/diet/generate');
+export const getDietPlan = () => API.get('/diet');
+export const generateDiet = () => API.post('/diet/generate');
 export const markDietMealComplete = (mealType) => API.put(`/diet/complete/${mealType}`);
 
 // ─── Progress APIs ────────────────────────────────────────────────────────────
-export const getProgress      = ()     => API.get('/progress');
-export const logProgress      = (data) => API.post('/progress', data);
+export const getProgress = () => API.get('/progress');
+export const logProgress = (data) => API.post('/progress', data);
 export const updateWaterIntake = (data) => API.put('/progress/water', data);
-export const getTodayProgress = ()     => API.get('/progress/today');
+export const getTodayProgress = () => API.get('/progress/today');
 
 // ─── AI Chat API ──────────────────────────────────────────────────────────────
 export const askAI = (data) => API.post('/ai/chat', data);
