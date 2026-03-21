@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { getProfile, getWorkoutPlan, getDietPlan, getTodayProgress, askAI } from '../services/api';
 import WaterTracker from '../components/WaterTracker';
+import { Flame, Target, Scale, Activity, Trophy, ChevronRight, Apple, X, Send } from 'lucide-react';
 const StatCard = ({ icon, label, value, colorClass }) => (
   <div className={`card relative overflow-hidden group hover:-translate-y-1 transition-all duration-300`}>
     <div className={`absolute -right-6 -top-6 w-24 h-24 rounded-full opacity-10 blur-2xl group-hover:scale-150 transition-transform duration-500 ${colorClass.bg}`} />

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { getProfile, updateProfile } from '../services/api';
 import { useNavigate } from 'react-router-dom';
+import { User, CheckCircle, AlertTriangle, Scale, Target, Droplets, Flame, Save } from 'lucide-react';
 
 const Profile = () => {
   const navigate = useNavigate();
