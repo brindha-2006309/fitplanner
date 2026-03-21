@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fitplanner/static/css/main.8a1f6963.css",
+    "main.js": "/fitplanner/static/js/main.e1b51f53.js",
+    "index.html": "/fitplanner/index.html",
+    "main.8a1f6963.css.map": "/fitplanner/static/css/main.8a1f6963.css.map",
+    "main.e1b51f53.js.map": "/fitplanner/static/js/main.e1b51f53.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a1f6963.css",
+    "static/js/main.e1b51f53.js"
+  ]
+}
