@@ -19,6 +19,22 @@ const categoryIcons = {
   'Full Body': <Flame className="w-6 h-6" />
 };
 
+let exerciseImages;
+try {
+  exerciseImages = require.context('../assets/images', false, /\.(png|jpe?g|svg)$/);
+} catch (e) {
+  exerciseImages = null;
+}
+
+const getExerciseImage = (imageName) => {
+  try {
+    if (exerciseImages) {
+      return exerciseImages(`./${imageName}`);
+    }
+  } catch (e) {}
+  return `https://placehold.co/400x250/1e293b/f97316?text=${imageName.split('.')[0].replace(/-/g, '+')}`;
+};
+
 const difficultyColors = {
   Beginner:     'bg-green-600/20 text-green-400 border-green-600',
   Intermediate: 'bg-yellow-600/20 text-yellow-400 border-yellow-600',
@@ -207,7 +223,11 @@ const ExerciseLibrary = () => {
               {selectedExercise.image && (
                 <div className="mb-6 rounded-xl overflow-hidden border border-slate-700/80 shadow-2xl relative group">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-60 z-10"></div>
-                  <img src={selectedExercise.image} alt={selectedExercise.name} className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                  <img 
+                    src={getExerciseImage(selectedExercise.image)} 
+                    alt={selectedExercise.name} 
+                    className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-700" 
+                  />
                 </div>
               )}
               

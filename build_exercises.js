@@ -42,11 +42,12 @@ const exercises = [];
 for (const [muscle, difficulties] of Object.entries(data)) {
   for (const [difficulty, names] of Object.entries(difficulties)) {
     names.forEach(name => {
+      const imageName = name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '') + '.jpg';
       exercises.push({
         name,
         muscle,
         difficulty,
-        image: `https://placehold.co/400x250/1e293b/f97316?text=${name.replace(/\s+/g, '+')}`,
+        image: imageName,
         desc: `This is an impressive ${difficulty.toLowerCase()} level ${muscle.toLowerCase()} exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.`,
         instructions: [
           'Warm up deeply before beginning this grueling movement.',

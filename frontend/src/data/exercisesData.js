@@ -3,7 +3,7 @@ const exercises = [
     "name": "Knee Push-ups",
     "muscle": "Chest",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Knee+Push-ups",
+    "image": "knee-push-ups.jpg",
     "desc": "This is an impressive beginner level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -17,7 +17,7 @@ const exercises = [
     "name": "Wall Push-ups",
     "muscle": "Chest",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Wall+Push-ups",
+    "image": "wall-push-ups.jpg",
     "desc": "This is an impressive beginner level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -31,7 +31,7 @@ const exercises = [
     "name": "Incline Dumbbell Press",
     "muscle": "Chest",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Incline+Dumbbell+Press",
+    "image": "incline-dumbbell-press.jpg",
     "desc": "This is an impressive beginner level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -45,7 +45,7 @@ const exercises = [
     "name": "Pec Deck Machine",
     "muscle": "Chest",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Pec+Deck+Machine",
+    "image": "pec-deck-machine.jpg",
     "desc": "This is an impressive beginner level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -59,7 +59,7 @@ const exercises = [
     "name": "Seated Chest Press",
     "muscle": "Chest",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Seated+Chest+Press",
+    "image": "seated-chest-press.jpg",
     "desc": "This is an impressive beginner level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -73,7 +73,7 @@ const exercises = [
     "name": "Standard Push-ups",
     "muscle": "Chest",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Standard+Push-ups",
+    "image": "standard-push-ups.jpg",
     "desc": "This is an impressive intermediate level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -87,7 +87,7 @@ const exercises = [
     "name": "Barbell Bench Press",
     "muscle": "Chest",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Barbell+Bench+Press",
+    "image": "barbell-bench-press.jpg",
     "desc": "This is an impressive intermediate level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -101,7 +101,7 @@ const exercises = [
     "name": "Dumbbell Flyes",
     "muscle": "Chest",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Dumbbell+Flyes",
+    "image": "dumbbell-flyes.jpg",
     "desc": "This is an impressive intermediate level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -115,7 +115,7 @@ const exercises = [
     "name": "Cable Crossovers",
     "muscle": "Chest",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Cable+Crossovers",
+    "image": "cable-crossovers.jpg",
     "desc": "This is an impressive intermediate level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -129,7 +129,7 @@ const exercises = [
     "name": "Decline Bench Press",
     "muscle": "Chest",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Decline+Bench+Press",
+    "image": "decline-bench-press.jpg",
     "desc": "This is an impressive intermediate level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -143,7 +143,7 @@ const exercises = [
     "name": "Clap Push-ups",
     "muscle": "Chest",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Clap+Push-ups",
+    "image": "clap-push-ups.jpg",
     "desc": "This is an impressive advanced level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -157,7 +157,7 @@ const exercises = [
     "name": "Archer Push-ups",
     "muscle": "Chest",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Archer+Push-ups",
+    "image": "archer-push-ups.jpg",
     "desc": "This is an impressive advanced level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -171,7 +171,7 @@ const exercises = [
     "name": "Weighted Dips",
     "muscle": "Chest",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Weighted+Dips",
+    "image": "weighted-dips.jpg",
     "desc": "This is an impressive advanced level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -185,7 +185,7 @@ const exercises = [
     "name": "Guillotine Press",
     "muscle": "Chest",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Guillotine+Press",
+    "image": "guillotine-press.jpg",
     "desc": "This is an impressive advanced level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -199,7 +199,7 @@ const exercises = [
     "name": "One-Arm Push-ups",
     "muscle": "Chest",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=One-Arm+Push-ups",
+    "image": "one-arm-push-ups.jpg",
     "desc": "This is an impressive advanced level chest exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -213,7 +213,7 @@ const exercises = [
     "name": "Resistance Band Rows",
     "muscle": "Back",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Resistance+Band+Rows",
+    "image": "resistance-band-rows.jpg",
     "desc": "This is an impressive beginner level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -227,7 +227,7 @@ const exercises = [
     "name": "Superman Hold",
     "muscle": "Back",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Superman+Hold",
+    "image": "superman-hold.jpg",
     "desc": "This is an impressive beginner level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -241,7 +241,7 @@ const exercises = [
     "name": "Machine Pulldowns",
     "muscle": "Back",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Machine+Pulldowns",
+    "image": "machine-pulldowns.jpg",
     "desc": "This is an impressive beginner level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -255,7 +255,7 @@ const exercises = [
     "name": "Dumbbell Rows",
     "muscle": "Back",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Dumbbell+Rows",
+    "image": "dumbbell-rows.jpg",
     "desc": "This is an impressive beginner level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -269,7 +269,7 @@ const exercises = [
     "name": "Inverted Rows (knees bent)",
     "muscle": "Back",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Inverted+Rows+(knees+bent)",
+    "image": "inverted-rows-knees-bent.jpg",
     "desc": "This is an impressive beginner level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -283,7 +283,7 @@ const exercises = [
     "name": "Pull-ups",
     "muscle": "Back",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Pull-ups",
+    "image": "pull-ups.jpg",
     "desc": "This is an impressive intermediate level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -297,7 +297,7 @@ const exercises = [
     "name": "Barbell Rows",
     "muscle": "Back",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Barbell+Rows",
+    "image": "barbell-rows.jpg",
     "desc": "This is an impressive intermediate level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -311,7 +311,7 @@ const exercises = [
     "name": "T-Bar Rows",
     "muscle": "Back",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=T-Bar+Rows",
+    "image": "t-bar-rows.jpg",
     "desc": "This is an impressive intermediate level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -325,7 +325,7 @@ const exercises = [
     "name": "Seated Cable Rows",
     "muscle": "Back",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Seated+Cable+Rows",
+    "image": "seated-cable-rows.jpg",
     "desc": "This is an impressive intermediate level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -339,7 +339,7 @@ const exercises = [
     "name": "Lat Pulldowns",
     "muscle": "Back",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Lat+Pulldowns",
+    "image": "lat-pulldowns.jpg",
     "desc": "This is an impressive intermediate level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -353,7 +353,7 @@ const exercises = [
     "name": "Muscle-ups",
     "muscle": "Back",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Muscle-ups",
+    "image": "muscle-ups.jpg",
     "desc": "This is an impressive advanced level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -367,7 +367,7 @@ const exercises = [
     "name": "Weighted Pull-ups",
     "muscle": "Back",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Weighted+Pull-ups",
+    "image": "weighted-pull-ups.jpg",
     "desc": "This is an impressive advanced level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -381,7 +381,7 @@ const exercises = [
     "name": "Front Lever",
     "muscle": "Back",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Front+Lever",
+    "image": "front-lever.jpg",
     "desc": "This is an impressive advanced level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -395,7 +395,7 @@ const exercises = [
     "name": "One-Arm Pull-ups",
     "muscle": "Back",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=One-Arm+Pull-ups",
+    "image": "one-arm-pull-ups.jpg",
     "desc": "This is an impressive advanced level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -409,7 +409,7 @@ const exercises = [
     "name": "Pendlay Rows",
     "muscle": "Back",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Pendlay+Rows",
+    "image": "pendlay-rows.jpg",
     "desc": "This is an impressive advanced level back exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -423,7 +423,7 @@ const exercises = [
     "name": "Bodyweight Squats",
     "muscle": "Legs",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Bodyweight+Squats",
+    "image": "bodyweight-squats.jpg",
     "desc": "This is an impressive beginner level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -437,7 +437,7 @@ const exercises = [
     "name": "Walking Lunges",
     "muscle": "Legs",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Walking+Lunges",
+    "image": "walking-lunges.jpg",
     "desc": "This is an impressive beginner level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -451,7 +451,7 @@ const exercises = [
     "name": "Glute Bridges",
     "muscle": "Legs",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Glute+Bridges",
+    "image": "glute-bridges.jpg",
     "desc": "This is an impressive beginner level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -465,7 +465,7 @@ const exercises = [
     "name": "Step-ups",
     "muscle": "Legs",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Step-ups",
+    "image": "step-ups.jpg",
     "desc": "This is an impressive beginner level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -479,7 +479,7 @@ const exercises = [
     "name": "Calf Raises",
     "muscle": "Legs",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Calf+Raises",
+    "image": "calf-raises.jpg",
     "desc": "This is an impressive beginner level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -493,7 +493,7 @@ const exercises = [
     "name": "Barbell Squats",
     "muscle": "Legs",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Barbell+Squats",
+    "image": "barbell-squats.jpg",
     "desc": "This is an impressive intermediate level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -507,7 +507,7 @@ const exercises = [
     "name": "Romanian Deadlifts",
     "muscle": "Legs",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Romanian+Deadlifts",
+    "image": "romanian-deadlifts.jpg",
     "desc": "This is an impressive intermediate level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -521,7 +521,7 @@ const exercises = [
     "name": "Leg Press",
     "muscle": "Legs",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Leg+Press",
+    "image": "leg-press.jpg",
     "desc": "This is an impressive intermediate level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -535,7 +535,7 @@ const exercises = [
     "name": "Bulgarian Split Squats",
     "muscle": "Legs",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Bulgarian+Split+Squats",
+    "image": "bulgarian-split-squats.jpg",
     "desc": "This is an impressive intermediate level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -549,7 +549,7 @@ const exercises = [
     "name": "Goblet Squats",
     "muscle": "Legs",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Goblet+Squats",
+    "image": "goblet-squats.jpg",
     "desc": "This is an impressive intermediate level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -563,7 +563,7 @@ const exercises = [
     "name": "Pistol Squats",
     "muscle": "Legs",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Pistol+Squats",
+    "image": "pistol-squats.jpg",
     "desc": "This is an impressive advanced level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -577,7 +577,7 @@ const exercises = [
     "name": "Jump Squats",
     "muscle": "Legs",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Jump+Squats",
+    "image": "jump-squats.jpg",
     "desc": "This is an impressive advanced level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -591,7 +591,7 @@ const exercises = [
     "name": "Sissy Squats",
     "muscle": "Legs",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Sissy+Squats",
+    "image": "sissy-squats.jpg",
     "desc": "This is an impressive advanced level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -605,7 +605,7 @@ const exercises = [
     "name": "Heavy Deadlifts",
     "muscle": "Legs",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Heavy+Deadlifts",
+    "image": "heavy-deadlifts.jpg",
     "desc": "This is an impressive advanced level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -619,7 +619,7 @@ const exercises = [
     "name": "Overhead Squats",
     "muscle": "Legs",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Overhead+Squats",
+    "image": "overhead-squats.jpg",
     "desc": "This is an impressive advanced level legs exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -633,7 +633,7 @@ const exercises = [
     "name": "Standard Plank",
     "muscle": "Core",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Standard+Plank",
+    "image": "standard-plank.jpg",
     "desc": "This is an impressive beginner level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -647,7 +647,7 @@ const exercises = [
     "name": "Crunches",
     "muscle": "Core",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Crunches",
+    "image": "crunches.jpg",
     "desc": "This is an impressive beginner level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -661,7 +661,7 @@ const exercises = [
     "name": "Bicycle Crunches",
     "muscle": "Core",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Bicycle+Crunches",
+    "image": "bicycle-crunches.jpg",
     "desc": "This is an impressive beginner level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -675,7 +675,7 @@ const exercises = [
     "name": "Leg Raises",
     "muscle": "Core",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Leg+Raises",
+    "image": "leg-raises.jpg",
     "desc": "This is an impressive beginner level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -689,7 +689,7 @@ const exercises = [
     "name": "Russian Twists",
     "muscle": "Core",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Russian+Twists",
+    "image": "russian-twists.jpg",
     "desc": "This is an impressive beginner level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -703,7 +703,7 @@ const exercises = [
     "name": "Hanging Knee Raises",
     "muscle": "Core",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Hanging+Knee+Raises",
+    "image": "hanging-knee-raises.jpg",
     "desc": "This is an impressive intermediate level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -717,7 +717,7 @@ const exercises = [
     "name": "V-Ups",
     "muscle": "Core",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=V-Ups",
+    "image": "v-ups.jpg",
     "desc": "This is an impressive intermediate level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -731,7 +731,7 @@ const exercises = [
     "name": "Ab Wheel Rollouts",
     "muscle": "Core",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Ab+Wheel+Rollouts",
+    "image": "ab-wheel-rollouts.jpg",
     "desc": "This is an impressive intermediate level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -745,7 +745,7 @@ const exercises = [
     "name": "Cable Woodchoppers",
     "muscle": "Core",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Cable+Woodchoppers",
+    "image": "cable-woodchoppers.jpg",
     "desc": "This is an impressive intermediate level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -759,7 +759,7 @@ const exercises = [
     "name": "Decline Crunches",
     "muscle": "Core",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Decline+Crunches",
+    "image": "decline-crunches.jpg",
     "desc": "This is an impressive intermediate level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -773,7 +773,7 @@ const exercises = [
     "name": "Dragon Flag",
     "muscle": "Core",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Dragon+Flag",
+    "image": "dragon-flag.jpg",
     "desc": "This is an impressive advanced level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -787,7 +787,7 @@ const exercises = [
     "name": "Human Flag",
     "muscle": "Core",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Human+Flag",
+    "image": "human-flag.jpg",
     "desc": "This is an impressive advanced level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -801,7 +801,7 @@ const exercises = [
     "name": "L-Sit",
     "muscle": "Core",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=L-Sit",
+    "image": "l-sit.jpg",
     "desc": "This is an impressive advanced level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -815,7 +815,7 @@ const exercises = [
     "name": "Weighted Hanging Leg Raises",
     "muscle": "Core",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Weighted+Hanging+Leg+Raises",
+    "image": "weighted-hanging-leg-raises.jpg",
     "desc": "This is an impressive advanced level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -829,7 +829,7 @@ const exercises = [
     "name": "Windshield Wipers",
     "muscle": "Core",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Windshield+Wipers",
+    "image": "windshield-wipers.jpg",
     "desc": "This is an impressive advanced level core exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -843,7 +843,7 @@ const exercises = [
     "name": "Seated Dumbbell Press",
     "muscle": "Shoulders",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Seated+Dumbbell+Press",
+    "image": "seated-dumbbell-press.jpg",
     "desc": "This is an impressive beginner level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -857,7 +857,7 @@ const exercises = [
     "name": "Lateral Raises",
     "muscle": "Shoulders",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Lateral+Raises",
+    "image": "lateral-raises.jpg",
     "desc": "This is an impressive beginner level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -871,7 +871,7 @@ const exercises = [
     "name": "Front Raises",
     "muscle": "Shoulders",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Front+Raises",
+    "image": "front-raises.jpg",
     "desc": "This is an impressive beginner level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -885,7 +885,7 @@ const exercises = [
     "name": "Machine Shoulder Press",
     "muscle": "Shoulders",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Machine+Shoulder+Press",
+    "image": "machine-shoulder-press.jpg",
     "desc": "This is an impressive beginner level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -899,7 +899,7 @@ const exercises = [
     "name": "Resistance Band Pull-aparts",
     "muscle": "Shoulders",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Resistance+Band+Pull-aparts",
+    "image": "resistance-band-pull-aparts.jpg",
     "desc": "This is an impressive beginner level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -913,7 +913,7 @@ const exercises = [
     "name": "Overhead Barbell Press",
     "muscle": "Shoulders",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Overhead+Barbell+Press",
+    "image": "overhead-barbell-press.jpg",
     "desc": "This is an impressive intermediate level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -927,7 +927,7 @@ const exercises = [
     "name": "Arnold Press",
     "muscle": "Shoulders",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Arnold+Press",
+    "image": "arnold-press.jpg",
     "desc": "This is an impressive intermediate level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -941,7 +941,7 @@ const exercises = [
     "name": "Upright Rows",
     "muscle": "Shoulders",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Upright+Rows",
+    "image": "upright-rows.jpg",
     "desc": "This is an impressive intermediate level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -955,7 +955,7 @@ const exercises = [
     "name": "Face Pulls",
     "muscle": "Shoulders",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Face+Pulls",
+    "image": "face-pulls.jpg",
     "desc": "This is an impressive intermediate level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -969,7 +969,7 @@ const exercises = [
     "name": "Reverse Pec Deck",
     "muscle": "Shoulders",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Reverse+Pec+Deck",
+    "image": "reverse-pec-deck.jpg",
     "desc": "This is an impressive intermediate level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -983,7 +983,7 @@ const exercises = [
     "name": "Handstand Push-ups",
     "muscle": "Shoulders",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Handstand+Push-ups",
+    "image": "handstand-push-ups.jpg",
     "desc": "This is an impressive advanced level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -997,7 +997,7 @@ const exercises = [
     "name": "Pike Push-ups",
     "muscle": "Shoulders",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Pike+Push-ups",
+    "image": "pike-push-ups.jpg",
     "desc": "This is an impressive advanced level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1011,7 +1011,7 @@ const exercises = [
     "name": "Z-Press",
     "muscle": "Shoulders",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Z-Press",
+    "image": "z-press.jpg",
     "desc": "This is an impressive advanced level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1025,7 +1025,7 @@ const exercises = [
     "name": "Heavy Push Press",
     "muscle": "Shoulders",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Heavy+Push+Press",
+    "image": "heavy-push-press.jpg",
     "desc": "This is an impressive advanced level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1039,7 +1039,7 @@ const exercises = [
     "name": "Iron Cross",
     "muscle": "Shoulders",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Iron+Cross",
+    "image": "iron-cross.jpg",
     "desc": "This is an impressive advanced level shoulders exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1053,7 +1053,7 @@ const exercises = [
     "name": "Dumbbell Curls",
     "muscle": "Arms",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Dumbbell+Curls",
+    "image": "dumbbell-curls.jpg",
     "desc": "This is an impressive beginner level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1067,7 +1067,7 @@ const exercises = [
     "name": "Triceps Pushdowns",
     "muscle": "Arms",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Triceps+Pushdowns",
+    "image": "triceps-pushdowns.jpg",
     "desc": "This is an impressive beginner level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1081,7 +1081,7 @@ const exercises = [
     "name": "Hammer Curls",
     "muscle": "Arms",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Hammer+Curls",
+    "image": "hammer-curls.jpg",
     "desc": "This is an impressive beginner level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1095,7 +1095,7 @@ const exercises = [
     "name": "Bench Dips",
     "muscle": "Arms",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Bench+Dips",
+    "image": "bench-dips.jpg",
     "desc": "This is an impressive beginner level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1109,7 +1109,7 @@ const exercises = [
     "name": "Concentration Curls",
     "muscle": "Arms",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Concentration+Curls",
+    "image": "concentration-curls.jpg",
     "desc": "This is an impressive beginner level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1123,7 +1123,7 @@ const exercises = [
     "name": "Barbell Curls",
     "muscle": "Arms",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Barbell+Curls",
+    "image": "barbell-curls.jpg",
     "desc": "This is an impressive intermediate level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1137,7 +1137,7 @@ const exercises = [
     "name": "Overhead Tricep Extension",
     "muscle": "Arms",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Overhead+Tricep+Extension",
+    "image": "overhead-tricep-extension.jpg",
     "desc": "This is an impressive intermediate level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1151,7 +1151,7 @@ const exercises = [
     "name": "Preacher Curls",
     "muscle": "Arms",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Preacher+Curls",
+    "image": "preacher-curls.jpg",
     "desc": "This is an impressive intermediate level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1165,7 +1165,7 @@ const exercises = [
     "name": "Skull Crushers",
     "muscle": "Arms",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Skull+Crushers",
+    "image": "skull-crushers.jpg",
     "desc": "This is an impressive intermediate level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1179,7 +1179,7 @@ const exercises = [
     "name": "EZ Bar Curls",
     "muscle": "Arms",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=EZ+Bar+Curls",
+    "image": "ez-bar-curls.jpg",
     "desc": "This is an impressive intermediate level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1193,7 +1193,7 @@ const exercises = [
     "name": "Strict Curl",
     "muscle": "Arms",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Strict+Curl",
+    "image": "strict-curl.jpg",
     "desc": "This is an impressive advanced level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1207,7 +1207,7 @@ const exercises = [
     "name": "Weighted Dips (Triceps)",
     "muscle": "Arms",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Weighted+Dips+(Triceps)",
+    "image": "weighted-dips-triceps.jpg",
     "desc": "This is an impressive advanced level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1221,7 +1221,7 @@ const exercises = [
     "name": "Spider Curls",
     "muscle": "Arms",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Spider+Curls",
+    "image": "spider-curls.jpg",
     "desc": "This is an impressive advanced level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1235,7 +1235,7 @@ const exercises = [
     "name": "Close Grip Bench Press",
     "muscle": "Arms",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Close+Grip+Bench+Press",
+    "image": "close-grip-bench-press.jpg",
     "desc": "This is an impressive advanced level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1249,7 +1249,7 @@ const exercises = [
     "name": "One-Arm Tricep Extension",
     "muscle": "Arms",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=One-Arm+Tricep+Extension",
+    "image": "one-arm-tricep-extension.jpg",
     "desc": "This is an impressive advanced level arms exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1263,7 +1263,7 @@ const exercises = [
     "name": "Jumping Jacks",
     "muscle": "Full Body",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Jumping+Jacks",
+    "image": "jumping-jacks.jpg",
     "desc": "This is an impressive beginner level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1277,7 +1277,7 @@ const exercises = [
     "name": "Burpees (no pushup)",
     "muscle": "Full Body",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Burpees+(no+pushup)",
+    "image": "burpees-no-pushup.jpg",
     "desc": "This is an impressive beginner level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1291,7 +1291,7 @@ const exercises = [
     "name": "Mountain Climbers",
     "muscle": "Full Body",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Mountain+Climbers",
+    "image": "mountain-climbers.jpg",
     "desc": "This is an impressive beginner level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1305,7 +1305,7 @@ const exercises = [
     "name": "Kettlebell Deadlift",
     "muscle": "Full Body",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Kettlebell+Deadlift",
+    "image": "kettlebell-deadlift.jpg",
     "desc": "This is an impressive beginner level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1319,7 +1319,7 @@ const exercises = [
     "name": "Bear Crawls",
     "muscle": "Full Body",
     "difficulty": "Beginner",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Bear+Crawls",
+    "image": "bear-crawls.jpg",
     "desc": "This is an impressive beginner level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1333,7 +1333,7 @@ const exercises = [
     "name": "Standard Burpees",
     "muscle": "Full Body",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Standard+Burpees",
+    "image": "standard-burpees.jpg",
     "desc": "This is an impressive intermediate level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1347,7 +1347,7 @@ const exercises = [
     "name": "Kettlebell Swings",
     "muscle": "Full Body",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Kettlebell+Swings",
+    "image": "kettlebell-swings.jpg",
     "desc": "This is an impressive intermediate level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1361,7 +1361,7 @@ const exercises = [
     "name": "Box Jumps",
     "muscle": "Full Body",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Box+Jumps",
+    "image": "box-jumps.jpg",
     "desc": "This is an impressive intermediate level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1375,7 +1375,7 @@ const exercises = [
     "name": "Thrusters",
     "muscle": "Full Body",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Thrusters",
+    "image": "thrusters.jpg",
     "desc": "This is an impressive intermediate level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1389,7 +1389,7 @@ const exercises = [
     "name": "Medicine Ball Slams",
     "muscle": "Full Body",
     "difficulty": "Intermediate",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Medicine+Ball+Slams",
+    "image": "medicine-ball-slams.jpg",
     "desc": "This is an impressive intermediate level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1403,7 +1403,7 @@ const exercises = [
     "name": "Advanced Burpees",
     "muscle": "Full Body",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Advanced+Burpees",
+    "image": "advanced-burpees.jpg",
     "desc": "This is an impressive advanced level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1417,7 +1417,7 @@ const exercises = [
     "name": "Snatch",
     "muscle": "Full Body",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Snatch",
+    "image": "snatch.jpg",
     "desc": "This is an impressive advanced level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1431,7 +1431,7 @@ const exercises = [
     "name": "Clean and Jerk",
     "muscle": "Full Body",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Clean+and+Jerk",
+    "image": "clean-and-jerk.jpg",
     "desc": "This is an impressive advanced level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1445,7 +1445,7 @@ const exercises = [
     "name": "Devil Press",
     "muscle": "Full Body",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Devil+Press",
+    "image": "devil-press.jpg",
     "desc": "This is an impressive advanced level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
@@ -1459,7 +1459,7 @@ const exercises = [
     "name": "Muscle-up to Barbell",
     "muscle": "Full Body",
     "difficulty": "Advanced",
-    "image": "https://placehold.co/400x250/1e293b/f97316?text=Muscle-up+to+Barbell",
+    "image": "muscle-up-to-barbell.jpg",
     "desc": "This is an impressive advanced level full body exercise aiming to dramatically improve your physical fitness. Focus intensely on proper form and maintain strictly controlled breathing patterns.",
     "instructions": [
       "Warm up deeply before beginning this grueling movement.",
