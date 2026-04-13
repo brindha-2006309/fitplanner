@@ -92,22 +92,31 @@ const getMe = async (req, res) => {
 // @access  Public
 const googleLogin = async (req, res) => {
   const { credential } = req.body;
+  if (!credential) {
+    console.error('Google login error: No credential received from frontend');
+    return res.status(400).json({ message: 'No credential received from Google' });
+  }
+
   try {
+    console.log('googleLogin: Verifying token with GOOGLE_CLIENT_ID =', process.env.GOOGLE_CLIENT_ID);
     const ticket = await client.verifyIdToken({
       idToken: credential,
       audience: process.env.GOOGLE_CLIENT_ID,
     });
     const payload = ticket.getPayload();
+    console.log('googleLogin: Token verified successfully for user:', payload.email);
     const { sub, email, name, picture } = payload;
     
     let user = await User.findOne({ email });
     if (!user) {
+      console.log('googleLogin: Creating new user for:', email);
       user = await User.create({
         name,
         email,
         isGoogleAuth: true,
       });
     } else {
+      console.log('googleLogin: Found existing user for:', email);
       if (!user.isGoogleAuth) {
          user.isGoogleAuth = true;
          await user.save();
@@ -122,8 +131,8 @@ const googleLogin = async (req, res) => {
         token:       generateToken(user._id),
       });
   } catch (error) {
-    console.error('Google login error:', error);
-    res.status(500).json({ message: 'Google login failed' });
+    console.error('Google login details error:', error);
+    res.status(401).json({ message: 'Google login failed: Invalid Client / Token' });
   }
 };
 
@@ -149,28 +158,31 @@ const forgotPassword = async (req, res) => {
 
     // Create reset url
     const resetUrl = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/reset-password/${resetToken}`;
-
     const message = `You are receiving this email because you (or someone else) has requested the reset of a password. Please make a PUT request or visit: \n\n ${resetUrl}`;
+
+    console.log('forgotPassword: Setup Transporter using EMAIL_USER =', process.env.EMAIL_USER);
 
     try {
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: process.env.SMTP_EMAIL,
-          pass: process.env.SMTP_PASSWORD,
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS,
         },
       });
 
+      console.log('forgotPassword: Sending mail to', user.email);
       await transporter.sendMail({
-        from: `FitPlanner <${process.env.SMTP_EMAIL}>`,
+        from: `FitPlanner <${process.env.EMAIL_USER}>`,
         to: user.email,
         subject: 'Password Reset Token',
         text: message,
       });
 
+      console.log('forgotPassword: Email sent successfully.');
       res.status(200).json({ success: true, message: 'Email sent' });
     } catch (err) {
-      console.error(err);
+      console.error('forgotPassword email sending error:', err);
       user.resetPasswordToken = undefined;
       user.resetPasswordExpire = undefined;
       await user.save({ validateBeforeSave: false });
