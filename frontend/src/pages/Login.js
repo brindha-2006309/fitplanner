@@ -2,14 +2,29 @@
 
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { loginUser } from '../services/api';
+import { loginUser, googleLoginAuth } from '../services/api';
 import { Dumbbell, Mail, Lock, ArrowRight, ArrowLeft } from 'lucide-react';
+import { GoogleLogin } from '@react-oauth/google';
 
 const Login = () => {
   const navigate = useNavigate();
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  const handleGoogleSuccess = async (credentialResponse) => {
+    try {
+      setLoading(true);
+      const { data } = await googleLoginAuth({ credential: credentialResponse.credential });
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data));
+      navigate('/dashboard');
+    } catch (err) {
+      setError(err.response?.data?.message || 'Google Login failed');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -115,6 +130,18 @@ const Login = () => {
                 </>
               )}
             </button>
+            <div className="relative flex items-center justify-center w-full mt-6 mb-4">
+               <div className="absolute border-t border-slate-700 w-full"></div>
+               <span className="bg-[#1e293b] px-3 text-slate-400 text-sm z-10 shrink-0 rounded-md">or continue with</span>
+            </div>
+            <div className="flex justify-center w-full">
+               <GoogleLogin
+                  onSuccess={handleGoogleSuccess}
+                  onError={() => setError('Google Login Failed')}
+                  theme="filled_black"
+                  shape="rectangular"
+               />
+            </div>
           </form>
 
           <p className="text-slate-400 text-sm text-center mt-5">

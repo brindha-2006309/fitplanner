@@ -4,14 +4,16 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 // Page imports
-import Home         from './pages/Home';
-import Login        from './pages/Login';
-import Register     from './pages/Register';
-import Dashboard    from './pages/Dashboard';
-import WorkoutPlanner  from './pages/WorkoutPlanner';
-import DietPlanner     from './pages/DietPlanner';
-import ProgressTracker from './pages/ProgressTracker';
-import BMICalculator   from './pages/BMICalculator';
+import Home             from './pages/Home';
+import Login            from './pages/Login';
+import Register         from './pages/Register';
+import ForgotPassword   from './pages/ForgotPassword';
+import ResetPassword    from './pages/ResetPassword';
+import Dashboard        from './pages/Dashboard';
+import WorkoutPlanner   from './pages/WorkoutPlanner';
+import DietPlanner      from './pages/DietPlanner';
+import ProgressTracker  from './pages/ProgressTracker';
+import BMICalculator    from './pages/BMICalculator';
 import ExerciseLibrary from './pages/ExerciseLibrary';
 import Profile         from './pages/Profile';
 
@@ -47,6 +49,8 @@ function App() {
         <Route path="/"         element={<Home />} />
         <Route path="/login"    element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password"           element={<ForgotPassword />} />
+        <Route path="/reset-password/:token"     element={<ResetPassword />} />
 
         {/* Protected routes - require login */}
         <Route path="/dashboard" element={

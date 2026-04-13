@@ -2,6 +2,11 @@
 
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
+const nodemailer = require('nodemailer');
+const { OAuth2Client } = require('google-auth-library');
+
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 // Helper function to generate a JWT token
 const generateToken = (id) => {
@@ -82,4 +87,141 @@ const getMe = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser, getMe };
+// @desc    Google Login
+// @route   POST /api/auth/google
+// @access  Public
+const googleLogin = async (req, res) => {
+  const { credential } = req.body;
+  try {
+    const ticket = await client.verifyIdToken({
+      idToken: credential,
+      audience: process.env.GOOGLE_CLIENT_ID,
+    });
+    const payload = ticket.getPayload();
+    const { sub, email, name, picture } = payload;
+    
+    let user = await User.findOne({ email });
+    if (!user) {
+      user = await User.create({
+        name,
+        email,
+        isGoogleAuth: true,
+      });
+    } else {
+      if (!user.isGoogleAuth) {
+         user.isGoogleAuth = true;
+         await user.save();
+      }
+    }
+    
+    res.json({
+        _id:         user._id,
+        name:        user.name,
+        email:       user.email,
+        fitnessGoal: user.fitnessGoal,
+        token:       generateToken(user._id),
+      });
+  } catch (error) {
+    console.error('Google login error:', error);
+    res.status(500).json({ message: 'Google login failed' });
+  }
+};
+
+// @desc    Forgot Password
+// @route   POST /api/auth/forgot-password
+// @access  Public
+const forgotPassword = async (req, res) => {
+  const { email } = req.body;
+  try {
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: 'There is no user with that email' });
+    }
+
+    // Get reset token
+    const resetToken = crypto.randomBytes(20).toString('hex');
+    // Hash token and set to resetPasswordToken field
+    user.resetPasswordToken = crypto.createHash('sha256').update(resetToken).digest('hex');
+    // Set expire (15 mins)
+    user.resetPasswordExpire = Date.now() + 15 * 60 * 1000;
+    
+    await user.save({ validateBeforeSave: false });
+
+    // Create reset url
+    const resetUrl = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/reset-password/${resetToken}`;
+
+    const message = `You are receiving this email because you (or someone else) has requested the reset of a password. Please make a PUT request or visit: \n\n ${resetUrl}`;
+
+    try {
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.SMTP_EMAIL,
+          pass: process.env.SMTP_PASSWORD,
+        },
+      });
+
+      await transporter.sendMail({
+        from: `FitPlanner <${process.env.SMTP_EMAIL}>`,
+        to: user.email,
+        subject: 'Password Reset Token',
+        text: message,
+      });
+
+      res.status(200).json({ success: true, message: 'Email sent' });
+    } catch (err) {
+      console.error(err);
+      user.resetPasswordToken = undefined;
+      user.resetPasswordExpire = undefined;
+      await user.save({ validateBeforeSave: false });
+      return res.status(500).json({ message: 'Email could not be sent' });
+    }
+  } catch (error) {
+    console.error('Forgot password error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+// @desc    Reset Password
+// @route   PUT /api/auth/reset-password/:token
+// @access  Public
+const resetPassword = async (req, res) => {
+  try {
+    // Get hashed token
+    const resetPasswordToken = crypto.createHash('sha256').update(req.params.token).digest('hex');
+
+    const user = await User.findOne({
+      resetPasswordToken,
+      resetPasswordExpire: { $gt: Date.now() },
+    });
+
+    if (!user) {
+      return res.status(400).json({ message: 'Invalid or expired token' });
+    }
+
+    if (!req.body.password || req.body.password.length < 6) {
+       return res.status(400).json({ message: 'Password must be at least 6 characters long' });
+    }
+
+    // Set new password
+    user.password = req.body.password;
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpire = undefined;
+    
+    await user.save();
+
+    res.json({
+        _id:         user._id,
+        name:        user.name,
+        email:       user.email,
+        fitnessGoal: user.fitnessGoal,
+        token:       generateToken(user._id),
+        message:     'Password reset successfully'
+      });
+  } catch (error) {
+    console.error('Reset password error:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
+module.exports = { registerUser, loginUser, getMe, googleLogin, forgotPassword, resetPassword };

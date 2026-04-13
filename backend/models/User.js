@@ -19,8 +19,12 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: [true, 'Please enter a password'],
+      required: [function() { return !this.isGoogleAuth; }, 'Please enter a password'],
       minlength: 6,
+    },
+    isGoogleAuth: {
+      type: Boolean,
+      default: false,
     },
     // Profile fields
     age: { type: Number, default: null },
@@ -40,13 +44,15 @@ const userSchema = new mongoose.Schema(
     // Streak tracking
     streak: { type: Number, default: 0 },
     lastWorkoutDate: { type: Date, default: null },
+    resetPasswordToken: String,
+    resetPasswordExpire: Date,
   },
   { timestamps: true }
 );
 
 // Hash password before saving to database
 userSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) return next();
+  if (!this.isModified('password') || !this.password) return next();
   const salt = await bcrypt.genSalt(10);
   this.password = await bcrypt.hash(this.password, salt);
   next();

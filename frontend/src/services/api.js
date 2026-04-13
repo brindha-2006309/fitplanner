@@ -34,6 +34,9 @@ API.interceptors.response.use(
 // ─── Auth APIs ────────────────────────────────────────────────────────────────
 export const registerUser = (data) => API.post('/auth/register', data);
 export const loginUser = (data) => API.post('/auth/login', data);
+export const googleLoginAuth = (data) => API.post('/auth/google', data);
+export const forgotPasswordRequest = (data) => API.post('/auth/forgot-password', data);
+export const resetPasswordRequest = (token, data) => API.put(`/auth/reset-password/${token}`, data);
 export const getMe = () => API.get('/auth/me');
 
 // ─── Profile APIs ─────────────────────────────────────────────────────────────
