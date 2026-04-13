@@ -1,19 +1,21 @@
 // src/pages/DietPlanner.js - Daily diet plan page
 
 import React, { useEffect, useState } from 'react';
-import { getDietPlan, generateDiet, markDietMealComplete } from '../services/api';
+import { getDietPlan, generateDiet, markDietMealComplete, getProfile, updateProfile } from '../services/api';
 import DietCard from '../components/DietCard';
 
 const DietPlanner = () => {
   const [diet, setDiet]         = useState(null);
+  const [profile, setProfile]   = useState(null);
   const [loading, setLoading]   = useState(true);
   const [generating, setGenerating] = useState(false);
   const [message, setMessage]   = useState('');
 
   const fetchDiet = async () => {
     try {
-      const { data } = await getDietPlan();
-      setDiet(data);
+      const [dietRes, profRes] = await Promise.all([getDietPlan(), getProfile()]);
+      setDiet(dietRes.data);
+      setProfile(profRes.data);
     } catch (err) {
       console.error('Fetch diet error:', err);
     } finally {
@@ -45,6 +47,17 @@ const DietPlanner = () => {
       setTimeout(() => setMessage(''), 3000);
     } catch (err) {
       console.error('Mark complete error:', err);
+    }
+  };
+
+  const handleTimeChange = async (meal, time) => {
+    // Only update locally for instant UI
+    const updatedMeals = { ...profile.mealTimes, [meal]: time };
+    setProfile(p => ({ ...p, mealTimes: updatedMeals }));
+    try {
+      await updateProfile({ mealTimes: updatedMeals });
+    } catch(err) {
+      console.error('Profile update err', err);
     }
   };
 
@@ -106,6 +119,8 @@ const DietPlanner = () => {
               key={meal} 
               mealType={meal} 
               meal={diet[meal]} 
+              savedTime={profile?.mealTimes?.[meal]}
+              onTimeChange={(time) => handleTimeChange(meal, time)}
               onMarkComplete={() => handleMarkComplete(meal)}
             />
           ))}

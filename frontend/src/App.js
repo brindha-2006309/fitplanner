@@ -20,6 +20,7 @@ import Profile         from './pages/Profile';
 // Component imports
 import Navbar  from './components/Navbar';
 import Sidebar from './components/Sidebar';
+import useNotifications from './hooks/useNotifications';
 
 // ─── Private Route Wrapper ─────────────────────────────────────────────────────
 // Redirects to /login if no token found in localStorage
@@ -29,17 +30,20 @@ const PrivateRoute = ({ children }) => {
 };
 
 // ─── Layout for authenticated pages (with Sidebar) ────────────────────────────
-const AuthLayout = ({ children }) => (
-  <div className="flex h-screen w-full bg-slate-900 overflow-hidden">
-    <Sidebar />
-    <div className="flex-1 flex flex-col h-full overflow-hidden relative">
-      <Navbar className="flex-shrink-0" />
-      <main className="flex-1 p-6 overflow-y-auto custom-scrollbar relative">
-        {children}
-      </main>
+const AuthLayout = ({ children }) => {
+  useNotifications();
+  return (
+    <div className="flex h-screen w-full bg-slate-900 overflow-hidden">
+      <Sidebar />
+      <div className="flex-1 flex flex-col h-full overflow-hidden relative">
+        <Navbar className="flex-shrink-0" />
+        <main className="flex-1 p-6 overflow-y-auto custom-scrollbar relative">
+          {children}
+        </main>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 function App() {
   return (

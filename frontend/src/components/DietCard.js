@@ -10,7 +10,7 @@ const mealIcons = {
   snacks:    <Apple className="w-6 h-6 text-rose-500" />,
 };
 
-const DietCard = ({ mealType, meal, onMarkComplete }) => {
+const DietCard = ({ mealType, meal, savedTime, onTimeChange, onMarkComplete }) => {
   if (!meal) return null;
 
   return (
@@ -22,7 +22,10 @@ const DietCard = ({ mealType, meal, onMarkComplete }) => {
             {mealIcons[mealType] || <Apple className="w-6 h-6 text-emerald-500" />}
           </div>
           <div>
-            <h3 className="text-white font-bold text-lg capitalize tracking-wide">{mealType}</h3>
+            <div className="flex items-center gap-2 mb-1">
+              <h3 className="text-white font-bold text-lg capitalize tracking-wide">{mealType}</h3>
+              <input type="time" value={savedTime || ''} onChange={(e) => onTimeChange(e.target.value)} className="bg-slate-900 border border-slate-700 rounded px-2 py-0.5 text-xs text-orange-400 focus:outline-none focus:border-orange-500 cursor-pointer" />
+            </div>
             <p className="text-slate-400 text-sm font-medium">{meal.name}</p>
           </div>
         </div>

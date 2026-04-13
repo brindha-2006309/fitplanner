@@ -19,7 +19,7 @@ const getProfile = async (req, res) => {
 // @route   PUT /api/profile
 // @access  Private
 const updateProfile = async (req, res) => {
-  const { name, age, gender, height, weight, fitnessGoal, waterGoal, caloriesGoal } = req.body;
+  const { name, age, gender, height, weight, fitnessGoal, waterGoal, caloriesGoal, mealTimes, workoutTime } = req.body;
 
   try {
     const user = await User.findById(req.user._id);
@@ -32,8 +32,13 @@ const updateProfile = async (req, res) => {
     if (height)       user.height       = height;
     if (weight)       user.weight       = weight;
     if (fitnessGoal)  user.fitnessGoal  = fitnessGoal;
-    if (waterGoal)    user.waterGoal    = waterGoal;
+    if (waterGoal !== undefined) user.waterGoal = waterGoal;
     if (caloriesGoal) user.caloriesGoal = caloriesGoal;
+    
+    if (mealTimes) {
+       user.mealTimes = { ...user.mealTimes, ...mealTimes };
+    }
+    if (workoutTime) user.workoutTime = workoutTime;
 
     const updatedUser = await user.save();
     res.json({
@@ -47,6 +52,8 @@ const updateProfile = async (req, res) => {
       fitnessGoal:  updatedUser.fitnessGoal,
       waterGoal:    updatedUser.waterGoal,
       caloriesGoal: updatedUser.caloriesGoal,
+      mealTimes:    updatedUser.mealTimes,
+      workoutTime:  updatedUser.workoutTime,
       streak:       updatedUser.streak,
     });
   } catch (error) {

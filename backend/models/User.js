@@ -39,8 +39,15 @@ const userSchema = new mongoose.Schema(
       },
       default: 'maintenance',
     },
-    waterGoal: { type: Number, default: 8 }, // glasses per day
+    waterGoal: { type: Number, default: 2.5 }, // liters per day
     caloriesGoal: { type: Number, default: 2000 },
+    mealTimes: {
+      breakfast: { type: String, default: '08:00' },
+      lunch: { type: String, default: '13:00' },
+      dinner: { type: String, default: '19:00' },
+      snacks: { type: String, default: '16:00' }
+    },
+    workoutTime: { type: String, default: '17:00' },
     // Streak tracking
     streak: { type: Number, default: 0 },
     lastWorkoutDate: { type: Date, default: null },

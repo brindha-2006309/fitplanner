@@ -1,19 +1,21 @@
 // src/pages/WorkoutPlanner.js - Weekly workout plan page
 
 import React, { useEffect, useState } from 'react';
-import { getWorkoutPlan, generateWorkoutPlan, markWorkoutComplete } from '../services/api';
+import { getWorkoutPlan, generateWorkoutPlan, markWorkoutComplete, getProfile, updateProfile } from '../services/api';
 import WorkoutCard from '../components/WorkoutCard';
 
 const WorkoutPlanner = () => {
   const [workout, setWorkout] = useState(null);
+  const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [generating, setGenerating] = useState(false);
   const [message, setMessage] = useState('');
 
   const fetchPlan = async () => {
     try {
-      const { data } = await getWorkoutPlan();
-      setWorkout(data);
+      const [wRes, pRes] = await Promise.all([getWorkoutPlan(), getProfile()]);
+      setWorkout(wRes.data);
+      setProfile(pRes.data);
     } catch (err) {
       console.error('Fetch workout error:', err);
     } finally {
@@ -48,6 +50,12 @@ const WorkoutPlanner = () => {
     }
   };
 
+  const handleTimeChange = async (e) => {
+    const time = e.target.value;
+    setProfile(p => ({...p, workoutTime: time}));
+    try { await updateProfile({ workoutTime: time }); } catch(err){}
+  };
+
   if (loading) {
     return <div className="text-orange-400 text-center mt-20 animate-pulse text-xl">Loading workout plan...</div>;
   }
@@ -58,8 +66,10 @@ const WorkoutPlanner = () => {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-extrabold text-white">💪 Weekly Workout Plan</h1>
-          <p className="text-slate-400 text-sm mt-1">
+          <p className="text-slate-400 text-sm mt-1 flex items-center gap-2">
             Goal: <span className="text-orange-400 capitalize">{workout?.fitnessGoal?.replace('_', ' ')}</span>
+            <span className="mx-2">•</span> Time: 
+            <input type="time" value={profile?.workoutTime || ''} onChange={handleTimeChange} className="bg-slate-900 border border-slate-700 text-xs px-2 py-0.5 rounded text-orange-400 focus:outline-none cursor-pointer" />
           </p>
         </div>
         <button

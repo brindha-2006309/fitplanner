@@ -8,7 +8,10 @@ const progressSchema = new mongoose.Schema(
     date:           { type: Date, default: Date.now },
     weight:         { type: Number, default: null },      // in kg
     caloriesBurned: { type: Number, default: 0 },
-    waterIntake:    { type: Number, default: 0 },         // glasses consumed today
+    waterIntake:    { type: Number, default: 0 },         // total liters today
+    waterMorning:   { type: Number, default: 0 },         // liters in morning
+    waterAfternoon: { type: Number, default: 0 },         // liters in afternoon
+    waterEvening:   { type: Number, default: 0 },         // liters in evening
     workoutDone:    { type: Boolean, default: false },
     notes:          { type: String, default: '' },
   },

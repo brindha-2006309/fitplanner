@@ -72,7 +72,7 @@ const logProgress = async (req, res) => {
 // @route   PUT /api/progress/water
 // @access  Private
 const updateWater = async (req, res) => {
-  const { waterIntake } = req.body;
+  const { waterIntake, waterMorning, waterAfternoon, waterEvening } = req.body;
 
   try {
     const today = new Date();
@@ -86,12 +86,18 @@ const updateWater = async (req, res) => {
     });
 
     if (progress) {
-      progress.waterIntake = waterIntake;
+      if (waterIntake !== undefined) progress.waterIntake = waterIntake;
+      if (waterMorning !== undefined) progress.waterMorning = waterMorning;
+      if (waterAfternoon !== undefined) progress.waterAfternoon = waterAfternoon;
+      if (waterEvening !== undefined) progress.waterEvening = waterEvening;
       await progress.save();
     } else {
       progress = await Progress.create({
         user:        req.user._id,
-        waterIntake: waterIntake,
+        waterIntake: waterIntake || 0,
+        waterMorning: waterMorning || 0,
+        waterAfternoon: waterAfternoon || 0,
+        waterEvening: waterEvening || 0,
       });
     }
 

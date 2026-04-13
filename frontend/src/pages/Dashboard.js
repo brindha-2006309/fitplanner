@@ -230,8 +230,8 @@ const Dashboard = () => {
         {/* Water tracker */}
         <div>
           <WaterTracker
-            current={todayLog?.waterIntake || 0}
-            goal={profile?.waterGoal || 8}
+            todayLog={todayLog}
+            goal={profile?.waterGoal || 2.5}
           />
         </div>
       </div>
