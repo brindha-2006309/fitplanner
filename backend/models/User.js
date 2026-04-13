@@ -57,6 +57,24 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Auto-assign schedule timings based on fitnessGoal
+userSchema.pre('save', function (next) {
+  // If the user's focus changed, the AI immediately overrides schedules
+  if (this.isModified('fitnessGoal') || this.isNew) {
+    if (this.fitnessGoal === 'weight_loss') {
+      this.workoutTime = '06:30';
+      this.mealTimes = { breakfast: '08:00', lunch: '12:30', dinner: '18:30', snacks: '16:00' };
+    } else if (this.fitnessGoal === 'muscle_gain') {
+      this.workoutTime = '19:00';
+      this.mealTimes = { breakfast: '07:30', lunch: '13:00', dinner: '20:00', snacks: '17:00' };
+    } else { // maintenance
+      this.workoutTime = '17:00';
+      this.mealTimes = { breakfast: '08:00', lunch: '13:00', dinner: '19:30', snacks: '16:30' };
+    }
+  }
+  next();
+});
+
 // Hash password before saving to database
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password') || !this.password) return next();

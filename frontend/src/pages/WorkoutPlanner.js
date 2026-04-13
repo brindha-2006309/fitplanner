@@ -50,12 +50,6 @@ const WorkoutPlanner = () => {
     }
   };
 
-  const handleTimeChange = async (e) => {
-    const time = e.target.value;
-    setProfile(p => ({...p, workoutTime: time}));
-    try { await updateProfile({ workoutTime: time }); } catch(err){}
-  };
-
   if (loading) {
     return <div className="text-orange-400 text-center mt-20 animate-pulse text-xl">Loading workout plan...</div>;
   }
@@ -69,7 +63,9 @@ const WorkoutPlanner = () => {
           <p className="text-slate-400 text-sm mt-1 flex items-center gap-2">
             Goal: <span className="text-orange-400 capitalize">{workout?.fitnessGoal?.replace('_', ' ')}</span>
             <span className="mx-2">•</span> Time: 
-            <input type="time" value={profile?.workoutTime || ''} onChange={handleTimeChange} className="bg-slate-900 border border-slate-700 text-xs px-2 py-0.5 rounded text-orange-400 focus:outline-none cursor-pointer" />
+            <span className="bg-slate-900 border border-orange-500/30 font-bold text-xs px-2 py-0.5 rounded text-orange-400">
+              {profile?.workoutTime || '--:--'}
+            </span>
           </p>
         </div>
         <button

@@ -1,6 +1,6 @@
 // src/pages/ExerciseLibrary.js - Static exercise library with filter by muscle group
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Search, Dumbbell, Activity, Flame, Heart, Zap, Target, ArrowUp, ArrowRight, ArrowDown, ChevronRight, Filter, X } from 'lucide-react';
 
 import exercises from '../data/exercisesData';
@@ -30,6 +30,13 @@ const ExerciseLibrary = () => {
   const [difficultyFilter, setDiffFilter] = useState('All');
   const [search, setSearch]               = useState('');
   const [selectedExercise, setSelectedExercise] = useState(null);
+  const detailsRef = useRef(null);
+
+  useEffect(() => {
+    if (selectedExercise && detailsRef.current) {
+      detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [selectedExercise]);
 
   const filtered = exercises.filter((ex) => {
     const matchMuscle     = muscleFilter === 'All'     || ex.muscle     === muscleFilter;
@@ -165,8 +172,8 @@ const ExerciseLibrary = () => {
 
       {/* Exercise Details Modal */}
       {selectedExercise && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-          <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in overflow-y-auto">
+          <div className="bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl w-full max-w-lg relative my-8">
             
             {/* Modal Header */}
             <div className="bg-gradient-to-r from-orange-500 to-rose-500 p-6 flex items-start justify-between">
@@ -204,7 +211,7 @@ const ExerciseLibrary = () => {
                 </div>
               )}
               
-              <h3 className="text-white font-bold text-lg mb-3 flex items-center gap-2 relative z-20">
+              <h3 ref={detailsRef} className="text-white font-bold text-lg mb-3 flex items-center gap-2 relative z-20">
                 <Target className="w-5 h-5 text-orange-400" /> Instructions
               </h3>
               

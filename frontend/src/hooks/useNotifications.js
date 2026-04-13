@@ -53,10 +53,14 @@ const useNotifications = () => {
         }
 
         // 3. Water Tracker (Hardcoded Triggers)
+        const mornGoal = (profile.waterGoal * 0.40).toFixed(2);
+        const aftGoal = (profile.waterGoal * 0.35).toFixed(2);
+        const eveGoal = (profile.waterGoal * 0.25).toFixed(2);
+
         const waterTimes = {
-          '09:00': ['water_morn', 'Morning Hydration', "Start your day right! Don't forget to track your Morning Liters."],
-          '14:00': ['water_aft', 'Afternoon Hydration', "Stay hydrated! Have you logged your Afternoon Liters?"],
-          '20:00': ['water_eve', 'Evening Hydration', "Wrap up the day hydrated. Log your Evening Liters!"]
+          '09:00': ['water_morn', 'Morning Hydration', `Hydrate now! The AI requires a ${mornGoal}L target this morning!`],
+          '14:00': ['water_aft', 'Afternoon Hydration', `Stay hydrated! AI goal sets your Afternoon requirement at ${aftGoal}L.`],
+          '20:00': ['water_eve', 'Evening Hydration', `Wrap up your day! Hit your exact Evening goal of ${eveGoal}L.`]
         };
 
         if (waterTimes[currentTime]) {

@@ -50,17 +50,6 @@ const DietPlanner = () => {
     }
   };
 
-  const handleTimeChange = async (meal, time) => {
-    // Only update locally for instant UI
-    const updatedMeals = { ...profile.mealTimes, [meal]: time };
-    setProfile(p => ({ ...p, mealTimes: updatedMeals }));
-    try {
-      await updateProfile({ mealTimes: updatedMeals });
-    } catch(err) {
-      console.error('Profile update err', err);
-    }
-  };
-
   if (loading) {
     return <div className="text-orange-400 text-center mt-20 animate-pulse text-xl">Loading diet plan...</div>;
   }
@@ -120,7 +109,6 @@ const DietPlanner = () => {
               mealType={meal} 
               meal={diet[meal]} 
               savedTime={profile?.mealTimes?.[meal]}
-              onTimeChange={(time) => handleTimeChange(meal, time)}
               onMarkComplete={() => handleMarkComplete(meal)}
             />
           ))}

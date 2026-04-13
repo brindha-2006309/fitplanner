@@ -45,10 +45,14 @@ const WaterTracker = ({ todayLog, goal = 2.5, onUpdate }) => {
     }
   };
 
+  const morningLimit = parseFloat((goal * 0.40).toFixed(2));
+  const afternoonLimit = parseFloat((goal * 0.35).toFixed(2));
+  const eveningLimit = parseFloat((goal * 0.25).toFixed(2));
+
   const periods = [
-    { id: 'morning', label: 'Morning', icon: <Sunrise className="w-4 h-4 text-amber-500" /> },
-    { id: 'afternoon', label: 'Afternoon', icon: <Sun className="w-4 h-4 text-yellow-500" /> },
-    { id: 'evening', label: 'Evening', icon: <Moon className="w-4 h-4 text-indigo-400" /> }
+    { id: 'morning', label: 'Morning Goal', icon: <Sunrise className="w-4 h-4 text-amber-500" />, limit: morningLimit },
+    { id: 'afternoon', label: 'Afternoon Goal', icon: <Sun className="w-4 h-4 text-yellow-500" />, limit: afternoonLimit },
+    { id: 'evening', label: 'Evening Goal', icon: <Moon className="w-4 h-4 text-indigo-400" />, limit: eveningLimit }
   ];
 
   return (
@@ -71,7 +75,9 @@ const WaterTracker = ({ todayLog, goal = 2.5, onUpdate }) => {
             <div className="flex items-center gap-1 mb-2">
                {p.icon} <span className="text-slate-300 text-xs font-semibold">{p.label}</span>
             </div>
-            <span className="text-white font-bold text-lg mb-2">{parseFloat(water[p.id].toFixed(2))}L</span>
+            <span className="text-white font-bold text-lg mb-2">
+              {parseFloat(water[p.id].toFixed(2))}L <span className="text-xs font-medium text-slate-500 tracking-tighter">/ {p.limit}L</span>
+            </span>
             <div className="flex gap-2">
                <button onClick={() => handleUpdate(p.id, -0.25)} disabled={loading || water[p.id] <= 0} className="w-7 h-7 rounded bg-slate-700 hover:bg-rose-500 text-white flex items-center justify-center transition-colors disabled:opacity-50"><Minus className="w-4 h-4" /></button>
                <button onClick={() => handleUpdate(p.id, 0.25)} disabled={loading} className="w-7 h-7 rounded bg-slate-700 hover:bg-cyan-500 text-white flex items-center justify-center transition-colors disabled:opacity-50"><Plus className="w-4 h-4" /></button>
